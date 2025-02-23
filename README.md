@@ -2,6 +2,15 @@
 
 Welcome to the AI Agent Quick Lab! This repository contains everything you need to get started with creating and running an AI-powered chatbot using FastAPI and Ollama models.
 
+## Quick Start
+```bash
+# deploy
+kubectl run pod --image yuyatinnefeld/deepseek-ollame:1.0.0
+
+# start deepseek-coder
+kubectl exec -it pod -- ollama run deepseek-coder:6.7b
+```
+
 ## Ollama Models
 Explore the available Ollama models:
 
