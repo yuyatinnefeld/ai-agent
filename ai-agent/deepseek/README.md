@@ -69,3 +69,13 @@ curl http://localhost:11434/v1/chat/completions \
     ]
   }'
 ```
+## 3. Deploy with HelmChart
+```bash
+# push image
+export IMAGE_NAME="yuyatinnefeld/$MY_IMAGE"
+docker image tag ${MY_IMAGE} ${IMAGE_NAME}:1.0.0
+docker image push ${IMAGE_NAME}:1.0.0
+
+cd deepseek/helm
+helm install ollama . -f values.yaml
+```
